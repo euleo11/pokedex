@@ -1,12 +1,12 @@
 .steel {background-color: #f4f4f4;}
-.fire {background-color: #FDDFDF;}
-.grass {background-color: #DEFDE0;}
-.electric {background-color: #FCF7DE;}
-.water, .ice {background-color: #DEF3FD;}
+.fire {background-color: #EAAB7D; }
+.grass {background-color: #729F92;}
+.electric {background-color: #F4D23B;}
+.water, .ice {background-color: #71C3FF;}
 .ground {background-color: #f4e7da;}
 .rock {background-color: #d5d5d4;}
 .fairy {background-color: #fceaff;}
-.poison {background-color: #98d7a5;}
+.poison {background-color: #AD61AE;}
 .bug {background-color: #f8d5a3;}
 .dragon {background-color: #97b3e6;}
 .psychic {background-color: #eaeda1;}

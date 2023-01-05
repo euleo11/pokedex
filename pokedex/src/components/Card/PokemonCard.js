@@ -2,6 +2,9 @@ import * as React from 'react';
 import { PokemonCardContainer } from './PokemonCard.styled';
 import axios from 'axios';
 import '../../style.css';
+import { goToDetails } from '../../routes/coordinator';
+import { useNavigate } from 'react-router-dom'
+import pokebola from "../../assets/pokebola.png"
 
 export default function PokemonCard({ name, image, id, type }) {
   const [data, setData] = React.useState({});
@@ -27,10 +30,12 @@ export default function PokemonCard({ name, image, id, type }) {
 
   }, []);
 
-
+  const navigate = useNavigate()
 
   return (
     <PokemonCardContainer className={types}>
+
+      <img className='pokebolaFundo' src={pokebola} />
 
       <div className='first'>
         <div className='second'>
@@ -46,12 +51,15 @@ export default function PokemonCard({ name, image, id, type }) {
           </div>
 
         </div>
-          <img className='img' src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`} />
-        </div>
+        <img className='img' src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`} />
+
+      </div>
 
       <div className='fourth'>
-        <a className='details'>DETALHES</a>
-        <button className='capturar'>Capturar</button>
+        <a className='details' onClick={() => goToDetails(navigate)}>DETALHES</a>
+        <button
+          className='capturar'
+          >Capturar!</button>
       </div>
 
     </PokemonCardContainer>

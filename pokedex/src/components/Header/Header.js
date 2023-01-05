@@ -1,7 +1,7 @@
 import React from 'react'
 import { HeaderContainer } from './Header.styled'
 import { Button } from '@mui/material'
-import { goToPokemonList } from '../../routes/coordinator'
+import { goToPokedex } from '../../routes/coordinator'
 import { useNavigate } from 'react-router-dom'
 
 const Header = () => {
@@ -15,7 +15,7 @@ const Header = () => {
         <div>
           <img className='img' alt='poke-logo' src={logoImg} />
 
-          <Button className="button" variant="contained" onClick={() => goToPokemonList(navigate)}>POKEDEX</Button>
+          <Button className="button" variant="contained" onClick={() => goToPokedex(navigate)}>POKEDEX</Button>
         </div>
 
 

@@ -1,31 +1,39 @@
 import styled from "styled-components";
 
 export const PokemonCardContainer = styled.button`
-display: flex;
-flex-direction: column ;
+    display: flex;
+    flex-direction: column ;
 
-width: 440px;
-height: 210px;
+    width: 440px;
+    height: 210px;
 
-margin: 1rem;
-padding: 1rem;
+    margin: 1rem;
+    padding: 1rem;
 
-font-family: Inter;
-font-size: 1.5rem;
-font-weight: 700;
-line-height: 39px;
-letter-spacing: 0em;
-text-align: left;
+    font-family: Inter;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 39px;
+    letter-spacing: 0em;
+    text-align: left;
+
+    border-radius: 12px;
 
 .first {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-
+    
     width: 100%;
     height: 200px;
+    
+    //PARA ELEMENTOS NÃO SAIREM DO CARD
+    overflow:hidden;
+    
+    
 }
 .second {
+    
     display:flex;
     flex-direction: column;
 }
@@ -45,25 +53,71 @@ text-align: left;
     justify-content: space-between;
     width: 100%;
 
-    .details {
-        font-size: 1rem;
-    }
+.details {
+    width: 74px;
+    height: 24px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+/* identical to box height */
+
+    text-decoration-line: underline;
+
+    color: #FFFFFF;
+
+
+/* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
 
     .details:hover {
         cursor: pointer;
     }
 }
 .typeColor{
-    width: 100%;;
+    width: 100%;
 }
 .type{
     margin-right: 1rem;
 }
 .img{
+   
     width: 193px;
     height: 193px;
-    left: 286px;
-    top: 1086px;
+    left: 274px;
+    top: 294px;
+
+}
+.capturar{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 10px;
+
+    width: 146px;
+    height: 38px;
+
+    background: #FFFFFF;
+    border-radius: 8px;
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+.pokebolaFundo{
+    width: 210.73px;
+    height: 210.73px;
+    left: 294.37px;
+    top: -62px;
+    opacity: 0.17;
+    transform: rotate(30deg);
 }
 `
 
