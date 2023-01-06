@@ -35,9 +35,11 @@ export default function PokemonCard({ name, image, id, type }) {
   return (
     <PokemonCardContainer className={types}>
 
-      <img className='pokebolaFundo' src={pokebola} />
 
-      <div className='first'>
+      {/* <div className='first'> */}
+
+        {/* DIV PARA ID, NOME E TYPE */}
+
         <div className='second'>
           <p>#0{id}</p>
           <p>{name}</p>
@@ -50,17 +52,23 @@ export default function PokemonCard({ name, image, id, type }) {
             })}
           </div>
 
-        </div>
-        <img className='img' src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`} />
 
-      </div>
+        </div>          
 
-      <div className='fourth'>
-        <a className='details' onClick={() => goToDetails(navigate)}>DETALHES</a>
-        <button
-          className='capturar'
-          >Capturar!</button>
-      </div>
+            <img className='img' src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`} />
+
+            {/* <img className='pokebolaFundo' src={pokebola} /> */}
+          
+          
+          <div className='fourth'>
+            <a className='details' onClick={() => goToDetails(navigate, name)}>DETALHES</a>
+            <button
+              className='capturar'
+            >Capturar!</button>
+          </div>
+
+      {/* </div> */}
+
 
     </PokemonCardContainer>
   );

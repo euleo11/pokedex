@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const PokemonCardContainer = styled.button`
     display: flex;
-    flex-direction: column ;
+    
 
     width: 440px;
     height: 210px;
@@ -18,7 +18,7 @@ export const PokemonCardContainer = styled.button`
     text-align: left;
 
     border-radius: 12px;
-
+    flex-wrap: wrap;
 .first {
     display: flex;
     flex-direction: row;
@@ -36,12 +36,14 @@ export const PokemonCardContainer = styled.button`
     
     display:flex;
     flex-direction: column;
+    
 }
 .third {
     display:flex;
     flex-direction: row ;
     justify-content: space-evenly;
     width: 100px;
+    
 
     .type1 {
         margin-right: 1rem;
@@ -52,6 +54,7 @@ export const PokemonCardContainer = styled.button`
     display: flex;
     justify-content: space-between;
     width: 100%;
+    
 
 .details {
     width: 74px;
@@ -93,6 +96,7 @@ export const PokemonCardContainer = styled.button`
     left: 274px;
     top: 294px;
 
+    
 }
 .capturar{
     display: flex;
@@ -111,16 +115,30 @@ export const PokemonCardContainer = styled.button`
     order: 1;
     flex-grow: 0;
 }
-.pokebolaFundo{
-    width: 210.73px;
-    height: 210.73px;
-    left: 294.37px;
-    top: -62px;
-    opacity: 0.17;
-    transform: rotate(30deg);
+.imagemPokemon{
+    position: absolute;
+    
+}
+.imagemFundo{
+    position: absolute;
+}
+.posicaoImagens{
+    display: flex;
+    justify-content: center;
+    
+
 }
 `
 
+// .pokebolaFundo{
+//     width: 210.73px;
+//     height: 210.73px;
+//     left: 294.37px;
+//     top: -62px;
+//     opacity: 0.17;
+//     transform: rotate(30deg);
+// }
+    
 // font-family: Inter;
 // font-size: 32px;
 // font-weight: 700;
