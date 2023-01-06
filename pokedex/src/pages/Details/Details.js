@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Header from '../../components/Header/Header'
 import { goToHomePage } from '../../routes/coordinator'
@@ -7,27 +7,33 @@ import { DetailsContainer } from './Details.styled'
 const Details = ({ name, image, id, type }) => {
 
   const navigate = useNavigate()
+  const stringSeta = "<"
 
   return (
     <>
-    
-      <button onClick={() => goToHomePage(navigate)}>Todos Pokémons</button>
-
       <Header />
 
 <DetailsContainer>
-      <div className='cinza'>
 
-        <div>
+<button className='button' onClick={() => goToHomePage(navigate)}>{stringSeta} Todos Pokémons</button>
+  <div className='details'>
           <h1>Detalhes</h1>
         </div>
 
-        <div className='verde'>
-          <div className='imgFrontBack'>
-            imagem1
+      <div className='cinza'>
 
-            imagem2
-          </div>
+        
+
+        <div className='verde'>
+          
+          <div className='imgBackFront'>
+
+          <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/${id}.png`
+} />
+          <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/${id}.png`
+} />
+
+</div>
 
           <div className='stats'>STATS
 
@@ -41,12 +47,17 @@ const Details = ({ name, image, id, type }) => {
           <p>{name}</p>
             </div>
             <div> TYPE1 TYPE2</div>
+            
+            <div className='img'>
+<img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`} />
+            </div>
 
-            <div>MOVES
+            <div className='moves'>MOVES
 
             </div>
 
-            <img alt='POKEMON'/>
+            
+
           </div>
 
         </div>

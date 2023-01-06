@@ -5,14 +5,13 @@ display: flex;
 flex-direction: row;
 justify-content: center;
 background-color: white;
-height: 7rem;
+height: 6rem;
 width: 100vw;
 align-items: center;
 
 .img{
 width: 200px;
 height: 200px;
-margin-top: 5rem;
 }
 
 Button{
@@ -24,7 +23,7 @@ padding: 4px 10px;
 
 position: absolute;
 left: 80vw;
-top: 41px;
+top: 25px;
 width: 200px;
 height: 50px;
 }

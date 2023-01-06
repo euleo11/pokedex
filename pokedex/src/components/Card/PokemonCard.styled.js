@@ -19,24 +19,12 @@ export const PokemonCardContainer = styled.button`
 
     border-radius: 12px;
     flex-wrap: wrap;
-.first {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    overflow: auto;
     
-    width: 100%;
-    height: 200px;
-    
-    //PARA ELEMENTOS NÃO SAIREM DO CARD
-    overflow:hidden;
-    
-    
-}
 .second {
     
     display:flex;
     flex-direction: column;
-    
 }
 .third {
     display:flex;
@@ -44,11 +32,6 @@ export const PokemonCardContainer = styled.button`
     justify-content: space-evenly;
     width: 100px;
     
-
-    .type1 {
-        margin-right: 1rem;
-        margin-left: 2.5rem;
-    }
 }
 .fourth {
     display: flex;
@@ -95,7 +78,7 @@ export const PokemonCardContainer = styled.button`
     height: 193px;
     left: 274px;
     top: 294px;
-
+    justify-content: flex-end;
     
 }
 .capturar{
@@ -122,9 +105,8 @@ export const PokemonCardContainer = styled.button`
 .imagemFundo{
     position: absolute;
 }
-.posicaoImagens{
-    display: flex;
-    justify-content: center;
+.positionImg{
+    background-color: red;
     
 
 }

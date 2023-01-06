@@ -7,7 +7,9 @@ import axios from 'axios'
 import { HomePageContainer } from './HomePage.styled'
 
 
-const HomePage = () => {
+const HomePage = (props) => {
+
+  
   const [pokemons, setPokemons] = useState([])
   console.log(pokemons)
   useEffect(() => {

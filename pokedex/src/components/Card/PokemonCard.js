@@ -2,13 +2,28 @@ import * as React from 'react';
 import { PokemonCardContainer } from './PokemonCard.styled';
 import axios from 'axios';
 import '../../style.css';
-import { goToDetails } from '../../routes/coordinator';
+import { goToDetailsPage } from '../../routes/coordinator';
 import { useNavigate } from 'react-router-dom'
 import pokebola from "../../assets/pokebola.png"
+import GlobalState from '../../contexts/GlobalState';
+import { useContext, useEffect, useState } from "react";
+
 
 export default function PokemonCard({ name, image, id, type }) {
+  
+  const [ pokedex, setPokedex] = useState([])
+
+  const addToPokedex = (pokemonToAdd) => {
+    const newPokedex = [...pokedex, pokemonToAdd]
+    setPokedex(newPokedex) 
+    
+    const pokedexString = JSON.stringify(newPokedex)
+    window.localStorage.setItem("pokeBrowser", pokedexString)
+  }
+
   const [data, setData] = React.useState({});
   const [types, setTypes] = React.useState('');
+  
 
   const getPokemonType = () => {
     axios
@@ -32,6 +47,7 @@ export default function PokemonCard({ name, image, id, type }) {
 
   const navigate = useNavigate()
 
+
   return (
     <PokemonCardContainer className={types}>
 
@@ -47,7 +63,7 @@ export default function PokemonCard({ name, image, id, type }) {
           <div className='third'>
 
             {data.types && data.types.map((type) => {
-              return <p className="type">{type.type.name}</p>;
+              return <p className='type'>{type.type.name}</p>;
 
             })}
           </div>
@@ -55,16 +71,21 @@ export default function PokemonCard({ name, image, id, type }) {
 
         </div>          
 
+            <div className='positionImg'>
             <img className='img' src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`} />
+            </div>
 
             {/* <img className='pokebolaFundo' src={pokebola} /> */}
           
           
           <div className='fourth'>
-            <a className='details' onClick={() => goToDetails(navigate, name)}>DETALHES</a>
+            <a className='details' onClick={() => goToDetailsPage(navigate, name)}>DETALHES</a>
             <button
               className='capturar'
-            >Capturar!</button>
+              onClick={() => addToPokedex()}
+              >
+              CAPTURAR!
+            </button>
           </div>
 
       {/* </div> */}
