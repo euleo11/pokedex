@@ -1,6 +1,9 @@
 import styled from "styled-components"
 
 export const PokedexContainer = styled.main`
+background-color: #5E5E5E;
+width: 100vw;
+height: 100vw;
 .button{
     position: absolute;
 width: 210px;
@@ -18,5 +21,9 @@ line-height: 36px;
 text-decoration-line: underline;
 
 color: #1A1A1A;
+}
+h1{
+    color: white;
+    padding: 30px;
 }
 `

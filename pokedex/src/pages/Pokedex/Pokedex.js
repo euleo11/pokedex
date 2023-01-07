@@ -20,6 +20,7 @@ const Pokedex = ({name, pokemon, pokedex}) => {
     <PokedexContainer>
 
     <button className='button' onClick={() => goToHomePage(navigate)}>{stringSeta} Todos Pokémons</button>
+    
     <h1>Meus Pokémons</h1>
 
     <Container maxWidth="false" >
