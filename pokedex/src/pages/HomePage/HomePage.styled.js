@@ -2,12 +2,13 @@ import styled from "styled-components"
 
 export const HomePageContainer = styled.main `
 background-color: #5E5E5E;
-
+display: flex;
+justify-content: center;
+flex-direction: column;
 h1{
     color: white;
     padding: 2rem;
 }
-
 .button{
 display: flex;
 flex-direction: row;

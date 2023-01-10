@@ -105,11 +105,6 @@ export const PokemonCardContainer = styled.button`
 .imagemFundo{
     position: absolute;
 }
-.positionImg{
-    background-color: red;
-    
-
-}
 `
 
 // .pokebolaFundo{

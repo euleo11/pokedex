@@ -1,13 +1,33 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Header from '../../components/Header/Header'
 import { goToHomePage } from '../../routes/coordinator'
 import { DetailsContainer } from './Details.styled'
+import axios from 'axios';
+
 
 const Details = ({ name, image, id, type }) => {
 
   const navigate = useNavigate()
   const stringSeta = "<"
+  
+  const [data, setData] = useState({});
+console.log(id)
+  const getPokeDetails = () => {
+    axios
+    .get(`https://pokeapi.co/api/v2/pokemon/${id}/`)
+      .then((res) => {
+        console.log(res)
+        setData(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+  useEffect(() => {
+    getPokeDetails();
+    console.log(data)
+  }, []);
 
   return (
     <>
